@@ -1,0 +1,224 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    ;
+}
+body {
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 10% 80%;
+    grid-template-areas: 
+    "dashboard header header"
+    "dashboard header2 header2"
+    "dashboard cardarea cardarea2";
+    gap: 0px;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    gap: 20px;
+    padding-left: 3%;
+    background-color: beige;
+}
+
+.secondheader {
+    grid-area: header2;
+    display: flex;
+    gap: 20px;
+    padding-left: 3%;
+    background-color: beige;
+}
+.secondheader > button {
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(45deg, #4caf50, #81c784);
+            border: none;
+            border-radius: 32%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+}
+.dashboard {
+    grid-area: dashboard;
+    background: linear-gradient(45deg, #4caf50, #81c784);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100vh;
+}
+
+.bigbody {
+    grid-area: cardarea;
+    
+    gap: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 30% 30% 30%;
+    grid-template-areas:
+    "title ."
+    "card1 card2"
+    "card3 card4"
+    "card5 card6";
+    padding-left: 3%;
+}
+
+.rightbody {
+    grid-area: cardarea2;
+  
+    display: grid;
+    grid-template-rows: 5%  40% 5% 40%;
+    grid-template-areas: 
+    "top"
+    "two"
+    "three"
+    "bottom";
+    margin-right: 10px;
+    gap: 5px;
+}
+.search {
+    width: 300px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f8f8f8;
+    color: #999;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    height: 20%;
+    margin-top: 10px;
+}
+.search:hover {
+    background-color: #eaeaea;
+}
+
+.notis {
+    margin-left: 45%;
+}
+
+.blueBg {
+    margin-left: 50%;
+}
+
+.bigbody > p {
+    grid-area: title;
+    font-weight: 20px;
+}
+
+.bigcard1 {
+    grid-area: card1;
+}
+
+.bigcard2 {
+    grid-area: card2;
+}
+
+.bigcard3 {
+    grid-area: card3;
+}
+
+.bigcard4 {
+    grid-area: card4;
+}
+
+.bigcard5 {
+    grid-area: card5;
+}
+
+.bigcard6 {
+    grid-area: card6;
+}
+
+.bigbody > div {
+    max-width: 65%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: beige;
+}
+
+.star {
+    margin-left: 50%;
+}
+
+.smol {
+    color: lightslategray;
+    font-size: 10px; 
+
+}
+
+.bigbody > div > p {
+    color: lightslategray;
+    font-size: 20px;
+}
+
+.announcements {
+    grid-area: top;
+}
+.card1 {
+    grid-area: two;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    background-color: beige;
+    border-radius: 6px;
+    max-width: 65%;
+    padding: 10px;
+    
+}
+
+.trending {
+    grid-area: three;
+}
+
+.trendycard {
+    grid-area: bottom;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    background-color: beige;
+    border-radius: 6px;
+    max-width: 65%;
+    padding: 10px;
+    max-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+img {
+    height: 50%;
+    width: 5%;
+}
+
+.lilpfp {
+    height: 50%;
+    width: 50%;
+}
+
+.dashboard img {
+    width: 50%;
+    height: 50%;
+    margin-left: 10px;
+}
+
+.name {
+    margin-top: 20px;
+}
+
+.dashboard > * {
+    max-height: 100%;
+}
